@@ -1,5 +1,4 @@
-# IPS
-IdentityCore Demo
+#IdentityCore Demo
 
 Introduction:
 Implement and develop users management, access rights management.
