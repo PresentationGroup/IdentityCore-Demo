@@ -1,0 +1,31 @@
+﻿@model IEnumerable<System.Security.Claims.Claim>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>مجوزهای کاربر جاری</h1>
+
+<table class="table table-hover table-bordered">
+    <tr>
+        <td>عنوان</td>
+        <td>صادره از</td>
+        <td>نوع</td>
+        <td>مقدار</td>
+        <td>حذف</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Subject.Name</td>
+            <td>@item.Issuer</td>
+            <td>@item.Type</td>
+            <td>@item.Value</td>
+            <td>
+                <a asp-action="Delete" asp-route-ClaimType="@item.Type" class="btn btn-danger">
+                    حذف مجوز
+                </a>
+            </td>
+        </tr>
+    }
+</table>

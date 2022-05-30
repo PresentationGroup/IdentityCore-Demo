@@ -1,0 +1,51 @@
+﻿@model  EndPoint.Models.ViewModels.Role.AddUserRoleViewModel
+
+@{
+    ViewData["Title"] = "سلب نقش";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="padding-top:50px">
+    <p>
+        <text> سلب نقش جاری از کاربر  </text>
+        <text style="color:blue;">
+            @Model.UserName
+        </text>
+        <text>:</text>
+    </p>
+</div>
+<div>
+    <h4>AddUserRoleViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Role)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteUserRole">
+        <input type="submit" value="سلب نقش" class="btn btn-danger" /> |
+        <a asp-action="UserRoleAssignment">Back to List</a>
+    </form>
+</div>

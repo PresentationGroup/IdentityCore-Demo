@@ -1,0 +1,51 @@
+﻿@model IEnumerable< EndPoint.Models.ViewModels.User.RolesInUserListViewModel>
+
+@{
+    ViewData["Title"] = "نقش ها";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="padding-top:50px">
+    <p>
+        <text> نقشهایی که به کاربر </text>
+        <text style="color:blue;">
+            @ViewData["userName"]
+        </text>
+        <text> تخصیص داده شده است:</text>
+    </p>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoleDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDisable)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoleDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDisable)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+@Html.ActionLink("بازگشت", "Index", "User")
+
+

@@ -1,0 +1,45 @@
+﻿@model IEnumerable< EndPoint.Models.ViewModels.User.UserRoleAssignmentViewModel>
+
+@{
+    ViewData["Title"] = "تخصیص نقش";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h5 style="padding-top:50px">تخصیص نقش جدید به کاربران</h5>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentRoles)
+            </th>
+            <th>
+                عملیات
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @if (item.CurrentRoles != null && item.CurrentRoles.Count > 0)
+                        @Html.DropDownListFor(modelItem => item.CurrentRoles,
+                                                           item.CurrentRoles.Select(a => new SelectListItem { Value = a.Name, Text = a.Description }))
+
+                </td>
+                <td>
+                    @Html.ActionLink("تخصیص نقش", "AddUserRole", new { id = item.Id }) |
+                    @Html.ActionLink("سلب نقش", "DeleteUserRole", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

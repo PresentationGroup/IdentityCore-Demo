@@ -1,0 +1,66 @@
+﻿@model IEnumerable< EndPoint.Models.ViewModels.User.UsersListViewModel>
+
+@{
+    ViewData["Title"] = "لیست کاربران";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>لیست کاربران</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <td>
+                @Html.DisplayNameFor(model => model.EmailConfirmed)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccessFailedCount)
+            </th>
+            <th>
+                عملیات
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailConfirmed)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccessFailedCount)
+                </td>
+                <td>
+                    @Html.ActionLink("نقش ها", "RoleInUser", "User", new { id = item.Id }) |
+                    @Html.ActionLink("ویرایش", "Edit", "User", new { id = item.Id }) |
+                    @Html.ActionLink("حذف", "Delete", "User", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

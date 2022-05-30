@@ -1,0 +1,32 @@
+﻿@model  EndPoint.Models.ViewModels.Role.RoleViewModel
+
+@{
+    ViewData["Title"] = "حذف نقش";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>حذف نقش</h3>
+
+<h5>با حذف این نقش، وضعیت آن را به غیرفعال تغییر خواهید داد!</h5>
+<div>
+    <hr />
+    <dl class="row">
+           <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="حذف" class="btn btn-danger" /> |
+        <a asp-action="Index">انصراف</a>
+    </form>
+</div>

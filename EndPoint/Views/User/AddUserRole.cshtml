@@ -1,0 +1,41 @@
+﻿@model  EndPoint.Models.ViewModels.Role.AddUserRoleViewModel
+
+@{
+    ViewData["Title"] = "تخصیص نقش";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<div style="padding-top:50px">
+    <p>
+        <text> تخصیص نقش جدید به کاربر  </text>
+        <text style="color:blue;">
+            @Model.UserName
+        </text>
+        <text>:</text>
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddUserRole">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="Id" class="form-control" hidden="hidden" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Role" class="control-label"></label>
+                <select asp-for="Role" class="form-control" asp-items="Model.Roles"></select>
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="تخصیص نقش" class="btn btn-primary" /> |
+                <a asp-action="UserRoleAssignment">بازگشت</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
