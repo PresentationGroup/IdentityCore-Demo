@@ -12,6 +12,8 @@ namespace  Domain.Users
     {
         public string FullName { get; set; }
         public bool IsDisable { get; set; } 
-        public DateTime? DisableDate { get; set; }  
+        public DateTime? DisableDate { get; set; }
+
+
     }
 }
