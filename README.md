@@ -7,4 +7,4 @@ Technologies:
 => .net 5 
 => MVC
 => EF Core
-=> Oracle 19c 
+=> Sql 
