@@ -23,16 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityCore.EndPoint", "En
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistences", "Persistences\Persistences.csproj", "{65FD6079-DF21-40A2-8BF2-11A4B1A0FFC3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFSteressTest", "EFSteressTest\EFSteressTest.csproj", "{821C8FCD-1278-4496-99A4-CFC95357D622}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentications", "Authentications", "{1EC847B4-7148-4E91-B83A-3E91E8CCEA87}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.IdentityCoreConfiguration", "Authentication.IdentityCoreConfiguration\Authentication.IdentityCoreConfiguration.csproj", "{18E61437-8B83-4000-8C7D-4972D343D792}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.Configuration", "Authentication.Configuration\Authentication.Configuration.csproj", "{3DE6DCD1-B109-4007-82E1-F3DB0A234748}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentication.DapperConfiguration", "Authentication.DapperConfiguration\Authentication.DapperConfiguration.csproj", "{DE327039-3260-4D49-8B01-C5489CA19836}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,22 +49,6 @@ Global
 		{65FD6079-DF21-40A2-8BF2-11A4B1A0FFC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65FD6079-DF21-40A2-8BF2-11A4B1A0FFC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65FD6079-DF21-40A2-8BF2-11A4B1A0FFC3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{821C8FCD-1278-4496-99A4-CFC95357D622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{821C8FCD-1278-4496-99A4-CFC95357D622}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{821C8FCD-1278-4496-99A4-CFC95357D622}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{821C8FCD-1278-4496-99A4-CFC95357D622}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18E61437-8B83-4000-8C7D-4972D343D792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18E61437-8B83-4000-8C7D-4972D343D792}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18E61437-8B83-4000-8C7D-4972D343D792}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18E61437-8B83-4000-8C7D-4972D343D792}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3DE6DCD1-B109-4007-82E1-F3DB0A234748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DE6DCD1-B109-4007-82E1-F3DB0A234748}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DE6DCD1-B109-4007-82E1-F3DB0A234748}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DE6DCD1-B109-4007-82E1-F3DB0A234748}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE327039-3260-4D49-8B01-C5489CA19836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE327039-3260-4D49-8B01-C5489CA19836}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE327039-3260-4D49-8B01-C5489CA19836}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE327039-3260-4D49-8B01-C5489CA19836}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,11 +63,6 @@ Global
 		{2C13965E-B827-45F1-9506-8271E10E28D9} = {A88C45D2-E6AB-41E6-80ED-32A63E987A02}
 		{E5ADF8D8-7898-48E7-A1AA-0AC6EEA32012} = {91903F00-40A0-4A73-AC30-88E77FE08D7D}
 		{65FD6079-DF21-40A2-8BF2-11A4B1A0FFC3} = {A88C45D2-E6AB-41E6-80ED-32A63E987A02}
-		{821C8FCD-1278-4496-99A4-CFC95357D622} = {91903F00-40A0-4A73-AC30-88E77FE08D7D}
-		{1EC847B4-7148-4E91-B83A-3E91E8CCEA87} = {DDCA97BE-D636-4AF9-AD6E-DE066B95B03A}
-		{18E61437-8B83-4000-8C7D-4972D343D792} = {1EC847B4-7148-4E91-B83A-3E91E8CCEA87}
-		{3DE6DCD1-B109-4007-82E1-F3DB0A234748} = {1EC847B4-7148-4E91-B83A-3E91E8CCEA87}
-		{DE327039-3260-4D49-8B01-C5489CA19836} = {1EC847B4-7148-4E91-B83A-3E91E8CCEA87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8701A07D-6DC6-436E-8C0D-5B9CE033F58F}
