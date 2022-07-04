@@ -1,4 +1,4 @@
-﻿using  Domain.Attributes;
+using  Domain.Attributes;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,5 @@ namespace  Domain.Users
         public string FullName { get; set; }
         public bool IsDisable { get; set; } 
         public DateTime? DisableDate { get; set; }
-
-
     }
 }

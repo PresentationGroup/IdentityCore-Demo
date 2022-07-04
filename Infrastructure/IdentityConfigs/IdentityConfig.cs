@@ -2,10 +2,10 @@
 using  Persistences.Context;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace  Infrastructure.IdentityConfigs
 {
@@ -13,8 +13,8 @@ namespace  Infrastructure.IdentityConfigs
     {
         public static IServiceCollection AddIdentityService(this IServiceCollection services, IConfiguration configuration)
         {
-            string connectionIPSBase = configuration["ConnectionString:OrclConn"];
-            services.AddDbContext<IdentityDataBaseContext>(option => option.UseOracle(connectionIPSBase));
+            string connectionIPSBase = configuration["ConnectionStrings:UseSQL"];
+            services.AddDbContext<IdentityDataBaseContext>(option => option.UseSqlServer(connectionIPSBase));
 
             services.AddIdentity<User, Role>()
                 .AddEntityFrameworkStores<IdentityDataBaseContext>()
@@ -31,8 +31,11 @@ namespace  Infrastructure.IdentityConfigs
                     options.Password.RequireUppercase = false;
                     options.Password.RequiredUniqueChars = 1;
                     options.Password.RequireNonAlphanumeric = false;
-                    options.User.RequireUniqueEmail = true;
-                    options.Lockout.MaxFailedAccessAttempts = 5;
+                    
+                    options.User.RequireUniqueEmail = false;
+                    
+                    options.Lockout.AllowedForNewUsers = false;
+                    options.Lockout.MaxFailedAccessAttempts = 3;
                     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
                 });
 
